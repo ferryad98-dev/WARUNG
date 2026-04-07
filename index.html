@@ -6,55 +6,90 @@
   <title>Warung Makan Pecel Ponorogo - Singosari Malang</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    .hero-bg { background: linear-gradient(135deg, #e74c3c, #f39c12); }
+    .card-hover:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
+  </style>
 </head>
 <body class="bg-orange-50 font-sans">
 
   <!-- HERO -->
-  <header class="bg-gradient-to-r from-orange-600 to-red-600 text-white py-20 text-center">
-    <h1 class="text-5xl font-bold mb-2">Warung Makan Pecel Ponorogo</h1>
-    <p class="text-2xl">Pecel Asli Ponorogo • Enak • Murah • Halal</p>
-    <a href="https://wa.me/6282232864543" target="_blank"
-       class="mt-8 inline-block bg-white text-orange-600 font-bold px-8 py-4 rounded-full text-xl hover:bg-orange-100">
-       📲 Pesan via WhatsApp
-    </a>
+  <header class="hero-bg text-white py-16 text-center">
+    <div class="max-w-4xl mx-auto px-6">
+      <h1 class="text-5xl md:text-6xl font-bold mb-3">Warung Makan Pecel Ponorogo</h1>
+      <p class="text-2xl mb-2">Pecel Asli Ponorogo • Enak • Murah • Halal</p>
+      <div class="flex items-center justify-center gap-2 text-xl mb-8">
+        <span class="text-yellow-300">★★★★☆</span>
+        <span class="font-semibold">4.7 (Google Maps)</span>
+      </div>
+      <a href="https://wa.me/6282232864543" target="_blank"
+         class="inline-flex items-center gap-3 bg-white text-orange-600 font-bold px-10 py-5 rounded-3xl text-2xl hover:bg-orange-100 transition">
+        <i class="fab fa-whatsapp text-3xl"></i>
+        Pesan via WhatsApp Sekarang
+      </a>
+    </div>
   </header>
 
-  <!-- MENU -->
-  <section class="max-w-4xl mx-auto py-12 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">Menu Andalan</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white p-6 rounded-2xl shadow">Pecel Ponorogo + Nasi + Kerupuk Rp 15.000</div>
-      <div class="bg-white p-6 rounded-2xl shadow">Nasi Pecel Komplit Rp 18.000</div>
-      <div class="bg-white p-6 rounded-2xl shadow">Pecel Lele Rp 20.000</div>
-      <div class="bg-white p-6 rounded-2xl shadow">Es Teh / Es Jeruk Rp 5.000</div>
-      <!-- Tambahkan menu lain sesuai keinginan Anda nanti -->
+  <!-- MENU ANDALAN -->
+  <section class="max-w-5xl mx-auto py-12 px-6">
+    <h2 class="text-4xl font-bold text-center mb-10 text-orange-700">Menu Andalan</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="bg-white p-6 rounded-3xl shadow-md card-hover">Pecel Ponorogo + Nasi + Kerupuk <span class="font-bold text-orange-600">Rp 15.000</span></div>
+      <div class="bg-white p-6 rounded-3xl shadow-md card-hover">Nasi Pecel Komplit <span class="font-bold text-orange-600">Rp 18.000</span></div>
+      <div class="bg-white p-6 rounded-3xl shadow-md card-hover">Pecel Lele <span class="font-bold text-orange-600">Rp 20.000</span></div>
+      <div class="bg-white p-6 rounded-3xl shadow-md card-hover">Es Teh / Es Jeruk <span class="font-bold text-orange-600">Rp 5.000</span></div>
+      <!-- Tambah menu lain di sini nanti -->
     </div>
   </section>
 
   <!-- LOKASI & MAP -->
   <section class="bg-white py-12">
-    <div class="max-w-4xl mx-auto px-6">
-      <h2 class="text-3xl font-bold text-center mb-6">Lokasi Kami</h2>
-      <p class="text-center mb-6">Jl. Pengayoman No.117, Karanglo, Singosari, Malang</p>
-      
-      <!-- GANTI DENGAN EMBED MAP ANDA -->
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.123456789!2d112.6539963!3d-7.9195882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd62988205116cb%3A0x2b8fccc5e6742d08!2sWarung%20Makan%20Pecel%20Ponorogo!5e0!3m2!1sid!2sid!4v1740000000000" 
-              width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center mb-4 text-orange-700">Lokasi Kami</h2>
+      <p class="text-center text-xl mb-6 text-gray-600">
+        Jl. Pengayoman No.117, Karanglo, Banjararum,<br>
+        Kec. Singosari, Kabupaten Malang, Jawa Timur 65153
+      </p>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.123!2d112.6539963!3d-7.9195882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd62988205116cb%3A0x2b8fccc5e6742d08!2sWarung%20Makan%20Pecel%20Ponorogo!5e0!3m2!1sid!2sid!4v1744020000000" 
+              width="100%" height="450" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </section>
 
-  <!-- KONTAK -->
-  <section class="max-w-4xl mx-auto py-12 px-6 text-center">
-    <a href="https://wa.me/6282232864543" target="_blank"
-       class="inline-flex items-center gap-3 bg-green-500 text-white px-10 py-5 rounded-3xl text-2xl font-bold hover:bg-green-600">
-      <i class="fab fa-whatsapp text-3xl"></i>
-      Hubungi Kami via WhatsApp
-    </a>
-    <p class="mt-6 text-gray-600">📍 Dekat Tol Singosari • Buka setiap hari</p>
+  <!-- JAM BUKA + INFO -->
+  <section class="max-w-5xl mx-auto py-12 px-6 bg-orange-100 rounded-3xl mx-4">
+    <div class="grid md:grid-cols-2 gap-10">
+      <div>
+        <h3 class="text-2xl font-bold mb-6">🕒 Jam Buka</h3>
+        <p class="text-lg mb-4">Buka setiap hari • Dekat Tol Singosari</p>
+        <div class="space-y-3 text-lg">
+          <div class="flex justify-between"><span>Selasa</span><span class="font-medium">07.00 – 17.00</span></div>
+          <div class="flex justify-between"><span>Rabu – Senin</span><span class="font-medium">07.00 – 17.00</span></div>
+        </div>
+      </div>
+      <div>
+        <h3 class="text-2xl font-bold mb-6">Mengapa Pilih Kami?</h3>
+        <ul class="space-y-4 text-lg">
+          <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Pecel Ponorogo asli dengan bumbu khas</li>
+          <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Harga murah meriah</li>
+          <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Bisa dine-in, takeaway & GoFood</li>
+          <li class="flex items-start gap-3"><i class="fas fa-check text-green-500 mt-1"></i> Lokasi strategis dekat tol</li>
+        </ul>
+      </div>
+    </div>
   </section>
 
-  <footer class="bg-gray-900 text-white py-8 text-center">
-    © 2026 Warung Makan Pecel Ponorogo • Semua hak dilindungi
+  <!-- WHATSAPP BIG BUTTON -->
+  <div class="max-w-5xl mx-auto px-6 py-12 text-center">
+    <a href="https://wa.me/6282232864543" target="_blank"
+       class="inline-flex items-center gap-4 bg-green-500 hover:bg-green-600 text-white font-bold text-3xl px-12 py-7 rounded-3xl transition">
+      <i class="fab fa-whatsapp text-4xl"></i>
+      Hubungi Kami via WhatsApp
+    </a>
+  </div>
+
+  <footer class="bg-gray-900 text-white py-10 text-center">
+    <p>© 2026 Warung Makan Pecel Ponorogo • Semua hak dilindungi</p>
+    <p class="text-sm mt-2">Data lokasi diambil dari Google Maps</p>
   </footer>
 </body>
 </html>
