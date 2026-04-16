@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: system-ui, sans-serif; }
-    .hero-bg { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/2000/1200?random=pecel') center/cover no-repeat; }
+    .hero-bg { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://picsum.photos/2000/1200?random=pecel') center/cover no-repeat; }
   </style>
 </head>
 <body class="bg-gray-50">
@@ -18,13 +18,14 @@
   <nav class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center gap-3">
-        <i class="fa-solid fa-utensils text-3xl text-green-600"></i>
-        <h1 class="text-2xl font-bold text-green-700">Pecel Ponorogo</h1>
+        <i class="fa-solid fa-utensils text-3xl text-emerald-600"></i>
+        <h1 class="text-2xl font-bold text-emerald-700">Pecel Ponorogo</h1>
       </div>
       <div class="flex gap-6 text-lg">
-        <a href="#lokasi" class="hover:text-green-600">Lokasi</a>
-        <a href="#jam" class="hover:text-green-600">Jam Buka</a>
-        <a href="#kontak" class="hover:text-green-600">Kontak</a>
+        <a href="#menu" class="hover:text-emerald-600">Menu</a>
+        <a href="#lokasi" class="hover:text-emerald-600">Lokasi</a>
+        <a href="#jam" class="hover:text-emerald-600">Jam Buka</a>
+        <a href="#kontak" class="hover:text-emerald-600">Kontak</a>
       </div>
     </div>
   </nav>
@@ -33,7 +34,7 @@
   <header class="hero-bg text-white py-32">
     <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-5xl md:text-6xl font-bold mb-4">Warung Makan Pecel Ponorogo</h2>
-      <p class="text-2xl mb-6">Javanese Restaurant • Pecel Asli Ponorogo</p>
+      <p class="text-2xl mb-6">Pecel Asli Ponorogo • Rasa Rumah Jawa Timur</p>
       <div class="flex items-center justify-center gap-2 text-3xl">
         <span class="text-yellow-400">★</span>
         <span class="font-bold">4.7</span>
@@ -41,37 +42,116 @@
       </div>
       <div class="mt-8 flex flex-wrap gap-4 justify-center">
         <a href="https://wa.me/6282232864543" target="_blank"
-           class="bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full text-xl font-semibold flex items-center gap-3">
+           class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full text-xl font-semibold flex items-center gap-3">
           <i class="fa-brands fa-whatsapp text-3xl"></i>
           Pesan via WhatsApp
         </a>
-        <a href="#lokasi" 
-           class="bg-white text-green-700 hover:bg-gray-100 px-8 py-4 rounded-full text-xl font-semibold">
-          Lihat Lokasi di Maps
+        <a href="#menu" 
+           class="bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 rounded-full text-xl font-semibold">
+          Lihat Menu
         </a>
       </div>
     </div>
   </header>
 
-  <!-- Data dari Google Maps -->
+  <!-- Menu Andalan (baru) -->
+  <div id="menu" class="max-w-7xl mx-auto px-6 py-16 bg-white">
+    <h2 class="text-4xl font-bold text-center mb-4 text-emerald-700">Menu Andalan Kami</h2>
+    <p class="text-center text-gray-600 mb-12">Pecel khas Ponorogo dengan sambal kacang autentik</p>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Item 1 -->
+      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+        <img src="https://picsum.photos/id/292/600/400" alt="Nasi Pecel" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Nasi Pecel</h3>
+          <p class="text-gray-600 mt-2">Pecel sayur lengkap + nasi + kerupuk + lauk pilihan</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 18.000</span>
+            <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm">Terlaris</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+        <img src="https://picsum.photos/id/201/600/400" alt="Pecel Lele" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Pecel Lele</h3>
+          <p class="text-gray-600 mt-2">Lele goreng crispy + pecel sayur + sambal kacang</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 22.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+        <img src="https://picsum.photos/id/870/600/400" alt="Ayam Goreng Pecel" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Ayam Goreng Pecel</h3>
+          <p class="text-gray-600 mt-2">Ayam kampung goreng + pecel sayur lengkap</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 25.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Pecel Tahu Tempe" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Pecel Tahu Tempe</h3>
+          <p class="text-gray-600 mt-2">Tahu & tempe goreng + pecel sayur</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 15.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+        <img src="https://picsum.photos/id/133/600/400" alt="Nasi Rames Pecel" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Nasi Rames Pecel</h3>
+          <p class="text-gray-600 mt-2">Nasi + pecel + telur dadar + tahu tempe</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 20.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+        <img src="https://picsum.photos/id/292/600/400" alt="Es Teh" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Es Teh Manis</h3>
+          <p class="text-gray-600 mt-2">Teh segar khas warung pecel</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 5.000</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Info & Jam Buka (sama seperti sebelumnya, warna emerald) -->
   <div class="max-w-7xl mx-auto px-6 py-12">
     <div class="grid md:grid-cols-3 gap-8">
-      <!-- Info -->
       <div class="bg-white p-8 rounded-3xl shadow-lg">
-        <h3 class="text-xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-store text-green-600"></i> Informasi</h3>
+        <h3 class="text-xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-store text-emerald-600"></i> Informasi</h3>
         <p class="text-gray-700"><strong>Alamat:</strong><br>
           Jl. Pengayoman No.117, Karanglo, Banjararum,<br>
           Kec. Singosari, Kabupaten Malang,<br>
           Jawa Timur 65153
         </p>
         <p class="mt-6"><strong>Telepon / WA:</strong><br>
-          <a href="https://wa.me/6282232864543" class="text-green-600 font-bold text-xl">0822-3286-4543</a>
+          <a href="https://wa.me/6282232864543" class="text-emerald-600 font-bold text-xl">0822-3286-4543</a>
         </p>
       </div>
 
-      <!-- Jam Buka -->
       <div id="jam" class="bg-white p-8 rounded-3xl shadow-lg">
-        <h3 class="text-xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-clock text-green-600"></i> Jam Buka</h3>
+        <h3 class="text-xl font-semibold mb-6 flex items-center gap-3"><i class="fa-solid fa-clock text-emerald-600"></i> Jam Buka</h3>
         <ul class="space-y-4 text-lg">
           <li class="flex justify-between"><span>Senin – Jumat</span><span class="font-medium">07:00 – 17:00</span></li>
           <li class="flex justify-between"><span>Sabtu</span><span class="font-medium">07:00 – 15:00</span></li>
@@ -79,51 +159,44 @@
         </ul>
       </div>
 
-      <!-- Fasilitas -->
       <div class="bg-white p-8 rounded-3xl shadow-lg">
         <h3 class="text-xl font-semibold mb-6">Fasilitas</h3>
         <div class="grid grid-cols-2 gap-4 text-lg">
-          <div class="flex items-center gap-3"><i class="fa-solid fa-car text-green-600"></i> Parkir Gratis</div>
-          <div class="flex items-center gap-3"><i class="fa-solid fa-utensils text-green-600"></i> Dine-in</div>
-          <div class="flex items-center gap-3"><i class="fa-solid fa-bag-shopping text-green-600"></i> Takeaway</div>
-          <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-green-600"></i> Ramah Disabilitas</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-car text-emerald-600"></i> Parkir Gratis</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-utensils text-emerald-600"></i> Dine-in</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-bag-shopping text-emerald-600"></i> Takeaway</div>
+          <div class="flex items-center gap-3"><i class="fa-solid fa-wheelchair text-emerald-600"></i> Ramah Disabilitas</div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Google Maps Embed -->
+  <!-- Google Maps -->
   <div id="lokasi" class="max-w-7xl mx-auto px-6 py-12">
     <h2 class="text-3xl font-bold text-center mb-8">Lokasi Kami di Google Maps</h2>
     <div class="rounded-3xl overflow-hidden shadow-2xl">
-      <iframe 
-        width="100%" 
-        height="500" 
-        style="border:0" 
-        loading="lazy" 
-        allowfullscreen 
-        referrerpolicy="no-referrer-when-downgrade"
+      <iframe width="100%" height="500" style="border:0" loading="lazy" allowfullscreen referrerpolicy="no-referrer-when-downgrade"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.999!2d112.6539963!3d-7.9195882!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd62988205116cb%3A0x2b8fccc5e6742d08!2sWarung%20Makan%20Pecel%20Ponorogo!5e0!3m2!1sid!2sid!4v1740000000000">
       </iframe>
     </div>
   </div>
 
   <!-- Footer -->
-  <footer class="bg-green-800 text-white py-12">
+  <footer class="bg-emerald-800 text-white py-12">
     <div class="max-w-7xl mx-auto px-6 text-center">
       <p class="text-2xl font-bold mb-2">Warung Makan Pecel Ponorogo</p>
       <p class="mb-6">Jl. Pengayoman No.117, Singosari, Malang</p>
-      <a href="https://wa.me/6282232864543" class="inline-flex items-center gap-3 bg-green-600 hover:bg-green-500 px-6 py-3 rounded-full text-lg">
+      <a href="https://wa.me/6282232864543" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 px-6 py-3 rounded-full text-lg">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
         Hubungi Kami via WhatsApp
       </a>
-      <p class="mt-12 text-sm opacity-75">Website dibuat dengan ❤️ untuk kamu • Data diambil langsung dari Google Maps</p>
+      <p class="mt-12 text-sm opacity-75">Website dibuat dengan ❤️ • Data dari Google Maps</p>
     </div>
   </footer>
 
   <!-- Floating WA -->
   <a href="https://wa.me/6282232864543" target="_blank"
-     class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition text-4xl z-50">
+     class="fixed bottom-6 right-6 bg-emerald-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition text-4xl z-50">
     <i class="fa-brands fa-whatsapp"></i>
   </a>
 
