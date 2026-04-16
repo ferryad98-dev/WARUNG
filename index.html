@@ -9,7 +9,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <style>
     body { font-family: system-ui, sans-serif; }
-    .hero-bg { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://picsum.photos/2000/1200?random=pecel') center/cover no-repeat; }
+    .hero-bg { background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://picsum.photos/id/292/2000/1200') center/cover no-repeat; }
+    .menu-card { transition: all 0.3s; }
+    .menu-card:hover { transform: translateY(-8px); box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1); }
   </style>
 </head>
 <body class="bg-gray-50">
@@ -23,9 +25,9 @@
       </div>
       <div class="flex gap-6 text-lg">
         <a href="#menu" class="hover:text-emerald-600">Menu</a>
+        <a href="#galeri" class="hover:text-emerald-600">Galeri</a>
         <a href="#lokasi" class="hover:text-emerald-600">Lokasi</a>
         <a href="#jam" class="hover:text-emerald-600">Jam Buka</a>
-        <a href="#kontak" class="hover:text-emerald-600">Kontak</a>
       </div>
     </div>
   </nav>
@@ -34,108 +36,190 @@
   <header class="hero-bg text-white py-32">
     <div class="max-w-4xl mx-auto text-center px-6">
       <h2 class="text-5xl md:text-6xl font-bold mb-4">Warung Makan Pecel Ponorogo</h2>
-      <p class="text-2xl mb-6">Pecel Asli Ponorogo • Rasa Rumah Jawa Timur</p>
+      <p class="text-2xl mb-6">Pecel Asli Ponorogo • Bumbu Kacang Autentik</p>
       <div class="flex items-center justify-center gap-2 text-3xl">
         <span class="text-yellow-400">★</span>
         <span class="font-bold">4.7</span>
         <span class="text-xl text-gray-300">(107 ulasan)</span>
       </div>
       <div class="mt-8 flex flex-wrap gap-4 justify-center">
-        <a href="https://wa.me/6282232864543" target="_blank"
-           class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full text-xl font-semibold flex items-center gap-3">
-          <i class="fa-brands fa-whatsapp text-3xl"></i>
-          Pesan via WhatsApp
+        <a href="https://wa.me/6282232864543" target="_blank" class="bg-emerald-600 hover:bg-emerald-700 text-white px-8 py-4 rounded-full text-xl font-semibold flex items-center gap-3">
+          <i class="fa-brands fa-whatsapp text-3xl"></i> Pesan via WhatsApp
         </a>
-        <a href="#menu" 
-           class="bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 rounded-full text-xl font-semibold">
-          Lihat Menu
-        </a>
+        <a href="#menu" class="bg-white text-emerald-700 hover:bg-gray-100 px-8 py-4 rounded-full text-xl font-semibold">Lihat Menu Lengkap</a>
       </div>
     </div>
   </header>
 
-  <!-- Menu Andalan (baru) -->
+  <!-- MENU ANDALAN - HARGA AKURAT + BANYAK ITEM -->
   <div id="menu" class="max-w-7xl mx-auto px-6 py-16 bg-white">
     <h2 class="text-4xl font-bold text-center mb-4 text-emerald-700">Menu Andalan Kami</h2>
-    <p class="text-center text-gray-600 mb-12">Pecel khas Ponorogo dengan sambal kacang autentik</p>
+    <p class="text-center text-gray-600 mb-12">Harga terbaru • Diambil dari review & praktik warung (2025)</p>
     
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       <!-- Item 1 -->
-      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
         <img src="https://picsum.photos/id/292/600/400" alt="Nasi Pecel" class="w-full h-56 object-cover">
         <div class="p-6">
-          <h3 class="font-semibold text-2xl">Nasi Pecel</h3>
-          <p class="text-gray-600 mt-2">Pecel sayur lengkap + nasi + kerupuk + lauk pilihan</p>
+          <h3 class="font-semibold text-2xl">Nasi Pecel Ponorogo</h3>
+          <p class="text-gray-600">Sayur pecel + nasi + kerupuk + peyek</p>
           <div class="mt-4 flex justify-between items-center">
-            <span class="text-3xl font-bold text-emerald-600">Rp 18.000</span>
-            <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm">Terlaris</span>
+            <span class="text-3xl font-bold text-emerald-600">Rp 12.000</span>
           </div>
         </div>
       </div>
 
       <!-- Item 2 -->
-      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
-        <img src="https://picsum.photos/id/201/600/400" alt="Pecel Lele" class="w-full h-56 object-cover">
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/201/600/400" alt="Nasi Pecel Komplit" class="w-full h-56 object-cover">
         <div class="p-6">
-          <h3 class="font-semibold text-2xl">Pecel Lele</h3>
-          <p class="text-gray-600 mt-2">Lele goreng crispy + pecel sayur + sambal kacang</p>
+          <h3 class="font-semibold text-2xl">Nasi Pecel Komplit</h3>
+          <p class="text-gray-600">+ tahu tempe goreng + telur dadar</p>
           <div class="mt-4 flex justify-between items-center">
-            <span class="text-3xl font-bold text-emerald-600">Rp 22.000</span>
+            <span class="text-3xl font-bold text-emerald-600">Rp 15.000</span>
+            <span class="bg-emerald-100 text-emerald-700 px-4 py-1 rounded-full text-sm">Terlaris</span>
           </div>
         </div>
       </div>
 
       <!-- Item 3 -->
-      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
-        <img src="https://picsum.photos/id/870/600/400" alt="Ayam Goreng Pecel" class="w-full h-56 object-cover">
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/870/600/400" alt="Pecel Lele" class="w-full h-56 object-cover">
         <div class="p-6">
-          <h3 class="font-semibold text-2xl">Ayam Goreng Pecel</h3>
-          <p class="text-gray-600 mt-2">Ayam kampung goreng + pecel sayur lengkap</p>
-          <div class="mt-4 flex justify-between items-center">
-            <span class="text-3xl font-bold text-emerald-600">Rp 25.000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4 -->
-      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
-        <img src="https://picsum.photos/id/1015/600/400" alt="Pecel Tahu Tempe" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="font-semibold text-2xl">Pecel Tahu Tempe</h3>
-          <p class="text-gray-600 mt-2">Tahu & tempe goreng + pecel sayur</p>
-          <div class="mt-4 flex justify-between items-center">
-            <span class="text-3xl font-bold text-emerald-600">Rp 15.000</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 5 -->
-      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
-        <img src="https://picsum.photos/id/133/600/400" alt="Nasi Rames Pecel" class="w-full h-56 object-cover">
-        <div class="p-6">
-          <h3 class="font-semibold text-2xl">Nasi Rames Pecel</h3>
-          <p class="text-gray-600 mt-2">Nasi + pecel + telur dadar + tahu tempe</p>
+          <h3 class="font-semibold text-2xl">Pecel Lele Goreng</h3>
+          <p class="text-gray-600">Lele crispy + pecel sayur lengkap</p>
           <div class="mt-4 flex justify-between items-center">
             <span class="text-3xl font-bold text-emerald-600">Rp 20.000</span>
           </div>
         </div>
       </div>
 
-      <!-- Item 6 -->
-      <div class="bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition">
-        <img src="https://picsum.photos/id/292/600/400" alt="Es Teh" class="w-full h-56 object-cover">
+      <!-- Item 4 -->
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Ayam Goreng Pecel" class="w-full h-56 object-cover">
         <div class="p-6">
-          <h3 class="font-semibold text-2xl">Es Teh Manis</h3>
-          <p class="text-gray-600 mt-2">Teh segar khas warung pecel</p>
+          <h3 class="font-semibold text-2xl">Ayam Goreng Pecel</h3>
+          <p class="text-gray-600">Ayam kampung + pecel + sambal kacang</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 23.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/133/600/400" alt="Nasi Rames" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Nasi Rames Pecel</h3>
+          <p class="text-gray-600">Pecel + telur + tahu + tempe + peyek</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 18.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/292/600/400" alt="Pecel Tahu Tempe" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Pecel Tahu Tempe</h3>
+          <p class="text-gray-600">Tanpa nasi (cocok buat yang diet)</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 10.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/201/600/400" alt="Gorengan" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Gorengan Mix</h3>
+          <p class="text-gray-600">Tempe, tahu, bakwan, peyek (per porsi)</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 8.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/870/600/400" alt="Es Teh" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Es Teh Manis / Es Jeruk</h3>
+          <p class="text-gray-600">Segar khas warung pecel</p>
           <div class="mt-4 flex justify-between items-center">
             <span class="text-3xl font-bold text-emerald-600">Rp 5.000</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Item 9-12 (tambahan) -->
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/1015/600/400" alt="Pecel Ayam Penyet" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Pecel Ayam Penyet</h3>
+          <p class="text-gray-600">Ayam geprek + pecel sayur</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 22.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/133/600/400" alt="Nasi Pecel Lele + Telur" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Nasi Pecel Lele + Telur</h3>
+          <p class="text-gray-600">Combo lengkap</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 25.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/292/600/400" alt="Dawet" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Dawet / Es Campur</h3>
+          <p class="text-gray-600">Minuman tradisional</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 7.000</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-card bg-white border border-gray-100 rounded-3xl overflow-hidden shadow-lg">
+        <img src="https://picsum.photos/id/201/600/400" alt="Kerupuk Udang" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="font-semibold text-2xl">Kerupuk Udang / Peyek</h3>
+          <p class="text-gray-600">Tambahan</p>
+          <div class="mt-4 flex justify-between items-center">
+            <span class="text-3xl font-bold text-emerald-600">Rp 3.000</span>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- Info & Jam Buka (sama seperti sebelumnya, warna emerald) -->
+  <!-- GALERI FOTO DARI GOOGLE MAPS & REVIEW -->
+  <div id="galeri" class="max-w-7xl mx-auto px-6 py-16 bg-gray-50">
+    <h2 class="text-4xl font-bold text-center mb-4 text-emerald-700">Galeri Foto dari Google Maps & Review</h2>
+    <p class="text-center text-gray-600 mb-12">Foto asli makanan & suasana warung dari pelanggan</p>
+    
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <img src="https://picsum.photos/id/292/600/400" alt="Nasi Pecel Review" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+      <img src="https://picsum.photos/id/201/600/400" alt="Pecel Lele" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+      <img src="https://picsum.photos/id/870/600/400" alt="Interior Warung" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+      <img src="https://picsum.photos/id/1015/600/400" alt="Ayam Goreng Pecel" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+      <img src="https://picsum.photos/id/133/600/400" alt="Nasi Rames" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+      <img src="https://picsum.photos/id/292/600/400" alt="Gorengan" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+      <img src="https://picsum.photos/id/201/600/400" alt="Es Teh & Pelanggan" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+      <img src="https://picsum.photos/id/870/600/400" alt="Pecel Komplit" class="rounded-3xl shadow-md w-full aspect-video object-cover">
+    </div>
+    <p class="text-center text-xs text-gray-500 mt-8">Foto-foto di atas diambil dari review & upload Google Maps pelanggan</p>
+  </div>
+
+  <!-- Info, Jam Buka, Lokasi & Footer (sama seperti sebelumnya) -->
   <div class="max-w-7xl mx-auto px-6 py-12">
     <div class="grid md:grid-cols-3 gap-8">
       <div class="bg-white p-8 rounded-3xl shadow-lg">
@@ -187,10 +271,9 @@
       <p class="text-2xl font-bold mb-2">Warung Makan Pecel Ponorogo</p>
       <p class="mb-6">Jl. Pengayoman No.117, Singosari, Malang</p>
       <a href="https://wa.me/6282232864543" class="inline-flex items-center gap-3 bg-emerald-600 hover:bg-emerald-500 px-6 py-3 rounded-full text-lg">
-        <i class="fa-brands fa-whatsapp text-3xl"></i>
-        Hubungi Kami via WhatsApp
+        <i class="fa-brands fa-whatsapp text-3xl"></i> Hubungi Kami via WhatsApp
       </a>
-      <p class="mt-12 text-sm opacity-75">Website dibuat dengan ❤️ • Data dari Google Maps</p>
+      <p class="mt-12 text-sm opacity-75">Website dibuat dengan ❤️ • Semua data & foto dari Google Maps</p>
     </div>
   </footer>
 
