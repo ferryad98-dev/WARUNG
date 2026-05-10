@@ -2,7 +2,7 @@
 <html lang="id" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Warung Makan Pecel Ponorogo - Singosari Malang</title>
     
     <!-- SEO Meta Tags -->
@@ -27,8 +27,8 @@
                         sans: ['Poppins', 'sans-serif'],
                     },
                     colors: {
-                        'pecel-green': '#4d7c0f', // Olive green for banana leaves
-                        'pecel-accent': '#65a30d', // Lighter green for accents
+                        'pecel-green': '#4d7c0f', 
+                        'pecel-accent': '#65a30d', 
                         'pecel-dark': '#1c1917',
                     }
                 }
@@ -37,465 +37,331 @@
     </script>
 
     <style>
+        body {
+            background-color: #e5e7eb; /* Abu-abu untuk background desktop */
+        }
         .hero-pattern {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1631515243349-e0cb4c113309?q=80&w=2000&auto=format&fit=crop');
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1631515243349-e0cb4c113309?q=80&w=800&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
         }
         .smooth-shadow {
-            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
+        }
+        /* Menyembunyikan scrollbar untuk elemen yang bisa digeser horizontal */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
     </style>
 </head>
-<body class="font-sans text-gray-800 bg-green-50/30">
+<body class="font-sans text-gray-800 flex justify-center">
 
-    <!-- Navbar -->
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center gap-3 cursor-pointer" onclick="window.scrollTo(0,0)">
-                    <div class="w-10 h-10 bg-pecel-accent rounded-full flex items-center justify-center text-white font-bold text-xl">
-                        <i class="fa-solid fa-utensils"></i>
-                    </div>
-                    <span class="font-bold text-xl md:text-2xl text-pecel-dark tracking-tight">Pecel <span class="text-pecel-accent">Ponorogo</span></span>
+    <!-- Mobile App Container -->
+    <div class="w-full max-w-md bg-white min-h-screen shadow-2xl relative overflow-x-hidden pb-16">
+
+        <!-- Top Header App Style -->
+        <header class="fixed top-0 w-full max-w-md z-40 bg-white/95 backdrop-blur-md shadow-sm h-14 flex items-center justify-center px-4">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="w-7 h-7 bg-pecel-accent rounded-full flex items-center justify-center text-white font-bold text-xs">
+                    <i class="fa-solid fa-utensils"></i>
                 </div>
-                
-                <!-- Desktop Menu -->
-                <div class="hidden md:flex space-x-8 items-center">
-                    <a href="#beranda" class="text-gray-600 hover:text-pecel-accent font-medium transition-colors">Beranda</a>
-                    <a href="#tentang" class="text-gray-600 hover:text-pecel-accent font-medium transition-colors">Tentang</a>
-                    <a href="#menu" class="text-gray-600 hover:text-pecel-accent font-medium transition-colors">Menu Favorit</a>
-                    <a href="#ulasan" class="text-gray-600 hover:text-pecel-accent font-medium transition-colors">Ulasan</a>
-                    <a href="#lokasi" class="text-gray-600 hover:text-pecel-accent font-medium transition-colors">Lokasi</a>
-                    <a href="https://wa.me/6282232864543" target="_blank" class="bg-pecel-green text-white px-6 py-2.5 rounded-full font-medium hover:bg-green-700 transition-colors shadow-lg shadow-green-900/20 flex items-center gap-2">
-                        <i class="fa-brands fa-whatsapp text-lg"></i> Pesan
+                <span class="font-bold text-lg text-pecel-dark tracking-tight">Pecel <span class="text-pecel-accent">Ponorogo</span></span>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="beranda" class="hero-pattern h-[70vh] flex items-center relative pt-14">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-white/95 h-[110%] top-auto bottom-0"></div>
+            <div class="relative z-10 text-center px-5 w-full mt-10">
+                <span class="inline-block py-1 px-3 rounded-full bg-green-500/80 text-white text-[10px] font-semibold tracking-wider mb-4 shadow-sm">
+                    <i class="fa-solid fa-star text-yellow-300 mr-1"></i> 4.7 (107 Ulasan)
+                </span>
+                <h1 class="text-3xl font-bold text-white mb-3 leading-tight drop-shadow-md">
+                    Keistimewaan <br/> <span class="text-lime-300">Pecel Asli</span> Ponorogo
+                </h1>
+                <p class="text-sm text-gray-100 mb-6 font-light px-2 drop-shadow-md">
+                    Sajian pecel autentik khas Jawa Timur. Harga bersahabat mulai Rp 10.000.
+                </p>
+                <div class="flex flex-col gap-3 px-4">
+                    <a href="https://maps.app.goo.gl/zrQQ51wFMqbRTr8JA" target="_blank" class="bg-pecel-green text-white w-full py-3 rounded-full font-semibold text-sm shadow-lg flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                        <i class="fa-solid fa-location-arrow"></i> Petunjuk Arah
+                    </a>
+                    <a href="https://wa.me/6282232864543" target="_blank" class="bg-white text-pecel-green border-2 border-pecel-green w-full py-2.5 rounded-full font-semibold text-sm flex items-center justify-center gap-2 active:scale-95 transition-transform">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> Pesan Sekarang
                     </a>
                 </div>
+            </div>
+        </section>
 
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-pecel-accent focus:outline-none p-2">
-                        <i class="fa-solid fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full smooth-shadow">
-            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col">
-                <a href="#beranda" class="block px-3 py-3 text-gray-700 hover:bg-green-50 hover:text-pecel-accent rounded-lg font-medium">Beranda</a>
-                <a href="#tentang" class="block px-3 py-3 text-gray-700 hover:bg-green-50 hover:text-pecel-accent rounded-lg font-medium">Tentang</a>
-                <a href="#menu" class="block px-3 py-3 text-gray-700 hover:bg-green-50 hover:text-pecel-accent rounded-lg font-medium">Menu Favorit</a>
-                <a href="#ulasan" class="block px-3 py-3 text-gray-700 hover:bg-green-50 hover:text-pecel-accent rounded-lg font-medium">Ulasan</a>
-                <a href="#lokasi" class="block px-3 py-3 text-gray-700 hover:bg-green-50 hover:text-pecel-accent rounded-lg font-medium">Lokasi</a>
-                <a href="https://wa.me/6282232864543" class="mt-4 block text-center bg-pecel-green text-white px-3 py-3 rounded-xl font-medium shadow-md">
-                    <i class="fa-brands fa-whatsapp mr-2"></i> Hubungi Kami
-                </a>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Hero Section -->
-    <section id="beranda" class="hero-pattern min-h-screen flex items-center pt-20 relative">
-        <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/80"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center w-full">
-            <span class="inline-block py-1 px-3 rounded-full bg-green-500/20 text-green-300 border border-green-500/30 text-sm font-semibold tracking-wider mb-6 backdrop-blur-sm">
-                <i class="fa-solid fa-star text-yellow-400 mr-1"></i> 4.7 Rating Google Maps (107 Ulasan)
-            </span>
-            <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-                Keistimewaan Bumbu <br/> <span class="text-transparent bg-clip-text bg-gradient-to-r from-lime-400 to-pecel-accent">Pecel Asli Ponorogo</span>
-            </h1>
-            <p class="mt-4 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto mb-10 font-light">
-                Sajian pecel autentik dengan sayuran segar dan bumbu kacang rahasia khas Jawa Timur yang menggugah selera. Harga bersahabat mulai dari Rp 10.000.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#lokasi" class="bg-pecel-green text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-green-700 transition-all transform hover:-translate-y-1 shadow-xl shadow-green-900/30 flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-map-location-dot"></i> Kunjungi Warung
-                </a>
-                <a href="#menu" class="bg-white/10 backdrop-blur-md text-white border border-white/30 px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all flex items-center justify-center gap-2">
-                    <i class="fa-solid fa-utensils"></i> Lihat Menu
-                </a>
-            </div>
-        </div>
-        
-        <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#tentang" class="text-white/70 hover:text-white">
-                <i class="fa-solid fa-chevron-down text-3xl"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- Quick Info Feature Cards -->
-    <section class="relative -mt-16 z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-20">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white rounded-2xl p-6 smooth-shadow flex items-start gap-4 transform transition-transform hover:-translate-y-1 border border-gray-50">
-                <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 flex-shrink-0">
-                    <i class="fa-solid fa-money-bill-wave text-xl"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-gray-900">Harga Terjangkau</h3>
-                    <p class="text-gray-500 text-sm mt-1">Rp 1.000 – Rp 25.000 per orang. Hemat dan sangat mengenyangkan.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-2xl p-6 smooth-shadow flex items-start gap-4 transform transition-transform hover:-translate-y-1 border border-gray-50">
-                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-pecel-green flex-shrink-0">
-                    <i class="fa-solid fa-store text-xl"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-gray-900">Layanan</h3>
-                    <p class="text-gray-500 text-sm mt-1">Tersedia <span class="font-semibold text-pecel-green">Makan di Tempat</span> dan <span class="font-semibold text-pecel-green">Bawa Pulang</span>.</p>
-                </div>
-            </div>
-            <div class="bg-white rounded-2xl p-6 smooth-shadow flex items-start gap-4 transform transition-transform hover:-translate-y-1 border border-gray-50">
-                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 flex-shrink-0">
-                    <i class="fa-solid fa-clock text-xl"></i>
-                </div>
-                <div>
-                    <h3 class="font-bold text-lg text-gray-900">Jam Buka</h3>
-                    <p class="text-gray-500 text-sm mt-1">Mulai pukul 07.00 pagi. Cocok untuk sarapan maupun makan siang.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="tentang" class="py-16 bg-green-50/50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2 relative">
-                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop" alt="Pecel Tradisional" class="rounded-3xl shadow-2xl z-10 relative object-cover h-[400px] w-full" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Warung+Makan+Pecel'">
-                    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-pecel-accent rounded-full -z-0 opacity-20 blur-2xl"></div>
-                    <div class="absolute -top-6 -left-6 w-40 h-40 bg-pecel-green rounded-full -z-0 opacity-20 blur-2xl"></div>
-                </div>
-                <div class="md:w-1/2">
-                    <div class="inline-block px-4 py-1.5 rounded-full bg-green-100 text-pecel-green font-semibold text-sm mb-4">Tentang Kami</div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Cita Rasa Restoran Jawa di Jantung Singosari</h2>
-                    <p class="text-gray-600 mb-6 leading-relaxed">
-                        Selamat datang di Warung Makan Pecel Ponorogo! Kami menyajikan seporsi kehangatan dan tradisi melalui hidangan pecel asli. Terletak strategis di Jl. Pengayoman No.117, Karanglo, kami siap menjadi tempat persinggahan favorit Anda.
-                    </p>
-                    <p class="text-gray-600 mb-8 leading-relaxed">
-                        Dengan rating <strong>4.7 dari lebih dari 100 ulasan</strong>, kami berkomitmen untuk selalu menjaga kualitas bumbu kacang kami yang kental, manis, gurih, dan pedasnya pas, disiramkan di atas sayuran segar.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle text-pecel-green text-xl"></i>
-                            <span class="text-gray-700 font-medium">Bumbu Rahasia</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle text-pecel-green text-xl"></i>
-                            <span class="text-gray-700 font-medium">Sayuran Segar</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle text-pecel-green text-xl"></i>
-                            <span class="text-gray-700 font-medium">Lauk Bervariasi</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-check-circle text-pecel-green text-xl"></i>
-                            <span class="text-gray-700 font-medium">Tempat Nyaman</span>
-                        </div>
+        <!-- Quick Info Feature Cards (Horizontal Scroll) -->
+        <section class="relative z-20 px-4 mt-6 mb-12">
+            <div class="flex overflow-x-auto snap-x gap-4 pb-4 hide-scrollbar pt-2">
+                
+                <div class="min-w-[80%] snap-center bg-white rounded-2xl p-4 smooth-shadow flex items-center gap-4 border border-gray-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 flex-shrink-0">
+                        <i class="fa-solid fa-money-bill-wave text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-gray-900">Hemat & Kenyang</h3>
+                        <p class="text-gray-500 text-xs mt-0.5 leading-tight">Mulai Rp 1.000 – Rp 25.000 / orang.</p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Menu Section -->
-    <section id="menu" class="py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-green-100 text-pecel-green font-semibold text-sm mb-4">Menu Kami</div>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Pilihan Menu Favorit</h2>
-                <p class="text-gray-500">Beragam pilihan lauk pendamping untuk menyempurnakan sajian Nasi Pecel Anda.</p>
+                <div class="min-w-[80%] snap-center bg-white rounded-2xl p-4 smooth-shadow flex items-center gap-4 border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 flex-shrink-0">
+                        <i class="fa-solid fa-clock text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-gray-900">Buka Pagi</h3>
+                        <p class="text-gray-500 text-xs mt-0.5 leading-tight">Mulai pukul 07.00. Cocok buat sarapan.</p>
+                    </div>
+                </div>
+
+                <div class="min-w-[80%] snap-center bg-white rounded-2xl p-4 smooth-shadow flex items-center gap-4 border border-gray-100">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-pecel-green flex-shrink-0">
+                        <i class="fa-solid fa-store text-xl"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-sm text-gray-900">Layanan</h3>
+                        <p class="text-gray-500 text-xs mt-0.5 leading-tight">Makan di Tempat & Bawa Pulang.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Menu Section (2 Columns Grid) -->
+        <section id="menu" class="py-10 bg-green-50/50 px-4 rounded-t-3xl border-t border-green-100/50">
+            <div class="text-center mb-8">
+                <h2 class="text-2xl font-bold text-gray-900 mb-2">Menu Favorit</h2>
+                <p class="text-gray-500 text-xs px-4">Pilihan terbaik untuk menemani santap Nasi Pecel Anda hari ini.</p>
             </div>
 
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid grid-cols-2 gap-3">
                 <!-- Menu Item 1 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <!-- Using placeholder image, in real site replace with actual food photo -->
-                        <div class="w-full h-full bg-gradient-to-br from-pecel-green to-green-800 flex items-center justify-center text-white">
-                            <i class="fa-solid fa-bowl-rice text-5xl opacity-50 group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                    <div class="h-28 bg-gradient-to-br from-pecel-green to-green-800 flex items-center justify-center text-white relative">
+                        <i class="fa-solid fa-bowl-rice text-4xl opacity-40"></i>
+                        <span class="absolute bottom-2 left-2 bg-yellow-400 text-yellow-900 text-[9px] font-bold px-2 py-0.5 rounded">TERLARIS</span>
                     </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-2">
-                            <h3 class="font-bold text-xl text-gray-900">Nasi Pecel Pincuk</h3>
-                        </div>
-                        <p class="text-gray-500 text-sm mb-4">Nasi putih hangat dengan aneka sayur segar disiram bumbu kacang khas Ponorogo.</p>
-                        <div class="text-pecel-green font-bold text-lg">Mulai Rp 10.000</div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm text-gray-900 mb-1 leading-tight">Nasi Pecel Pincuk</h3>
+                        <p class="text-gray-400 text-[10px] leading-tight line-clamp-2 mb-2">Sayur segar dengan siraman bumbu kacang.</p>
+                        <div class="text-pecel-green font-bold text-xs">Mulai Rp 10k</div>
                     </div>
                 </div>
 
                 <!-- Menu Item 2 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <div class="w-full h-full bg-gradient-to-br from-lime-500 to-lime-700 flex items-center justify-center text-white">
-                            <i class="fa-solid fa-drumstick-bite text-5xl opacity-50 group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                    <div class="h-28 bg-gradient-to-br from-lime-500 to-lime-700 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-drumstick-bite text-4xl opacity-40"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl text-gray-900 mb-2">Aneka Sate</h3>
-                        <p class="text-gray-500 text-sm mb-4">Tersedia sate usus, sate telur puyuh, sate ati ampela yang manis gurih.</p>
-                        <div class="text-pecel-green font-bold text-lg">Rp 2.500 / tusuk</div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm text-gray-900 mb-1 leading-tight">Aneka Sate</h3>
+                        <p class="text-gray-400 text-[10px] leading-tight line-clamp-2 mb-2">Sate usus, puyuh, dan ati ampela manis gurih.</p>
+                        <div class="text-pecel-green font-bold text-xs">Rp 2.5k / tusuk</div>
                     </div>
                 </div>
 
                 <!-- Menu Item 3 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <div class="w-full h-full bg-gradient-to-br from-emerald-600 to-emerald-800 flex items-center justify-center text-white">
-                            <i class="fa-solid fa-cookie text-5xl opacity-50 group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                    <div class="h-28 bg-gradient-to-br from-emerald-600 to-emerald-800 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-cookie text-4xl opacity-40"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl text-gray-900 mb-2">Gorengan Hangat</h3>
-                        <p class="text-gray-500 text-sm mb-4">Tempe mendoan, tahu isi, ote-ote, dan peyek kacang renyah.</p>
-                        <div class="text-pecel-green font-bold text-lg">Mulai Rp 1.000</div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm text-gray-900 mb-1 leading-tight">Gorengan Hangat</h3>
+                        <p class="text-gray-400 text-[10px] leading-tight line-clamp-2 mb-2">Mendoan, tahu isi, ote-ote, dan peyek.</p>
+                        <div class="text-pecel-green font-bold text-xs">Mulai Rp 1k</div>
                     </div>
                 </div>
 
                 <!-- Menu Item 4 -->
-                <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow border border-gray-100 group">
-                    <div class="h-48 overflow-hidden bg-gray-200">
-                        <div class="w-full h-full bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white">
-                            <i class="fa-solid fa-mug-hot text-5xl opacity-50 group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+                    <div class="h-28 bg-gradient-to-br from-teal-400 to-teal-600 flex items-center justify-center text-white">
+                        <i class="fa-solid fa-mug-hot text-4xl opacity-40"></i>
                     </div>
-                    <div class="p-6">
-                        <h3 class="font-bold text-xl text-gray-900 mb-2">Minuman Segar</h3>
-                        <p class="text-gray-500 text-sm mb-4">Es teh manis, es jeruk, kopi hitam, dan teh hangat.</p>
-                        <div class="text-pecel-green font-bold text-lg">Mulai Rp 3.000</div>
+                    <div class="p-3">
+                        <h3 class="font-bold text-sm text-gray-900 mb-1 leading-tight">Minuman Segar</h3>
+                        <p class="text-gray-400 text-[10px] leading-tight line-clamp-2 mb-2">Es teh, es jeruk, kopi hitam hangat.</p>
+                        <div class="text-pecel-green font-bold text-xs">Mulai Rp 3k</div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Reviews Section -->
-    <section id="ulasan" class="py-20 bg-white border-t border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-16">
-                <div class="inline-block px-4 py-1.5 rounded-full bg-yellow-100 text-yellow-700 font-semibold text-sm mb-4">
-                    <i class="fa-solid fa-star text-yellow-500 mr-1"></i> Ulasan Pelanggan
+        <!-- About Section -->
+        <section id="tentang" class="py-12 bg-white px-4 border-t border-gray-50">
+            <div class="rounded-3xl overflow-hidden relative mb-6">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=600&auto=format&fit=crop" alt="Pecel Tradisional" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/2c3e50/ffffff?text=Warung+Makan'">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div class="absolute bottom-3 left-4">
+                    <div class="text-white font-bold text-lg">Cita Rasa Asli</div>
                 </div>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Apa Kata Mereka?</h2>
-                <p class="text-gray-500">Terima kasih atas lebih dari 107 ulasan positif dengan rata-rata rating 4.7 ⭐ dari para pelanggan setia kami di Google Maps.</p>
+            </div>
+            
+            <h2 class="text-xl font-bold text-gray-900 mb-3">Tentang Warung Kami</h2>
+            <p class="text-gray-600 text-sm leading-relaxed mb-5">
+                Kami menyajikan seporsi kehangatan melalui hidangan pecel asli. Terletak di Karanglo, kami menjaga kualitas bumbu kacang kental, manis, gurih, dan pedas pas yang disiramkan di atas sayuran segar.
+            </p>
+            
+            <div class="space-y-2">
+                <div class="flex items-center gap-3 bg-gray-50 p-2.5 rounded-xl border border-gray-100">
+                    <i class="fa-solid fa-check-circle text-pecel-green"></i>
+                    <span class="text-gray-700 text-sm font-medium">Bumbu Resep Rahasia</span>
+                </div>
+                <div class="flex items-center gap-3 bg-gray-50 p-2.5 rounded-xl border border-gray-100">
+                    <i class="fa-solid fa-check-circle text-pecel-green"></i>
+                    <span class="text-gray-700 text-sm font-medium">Sayuran Selalu Segar</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section (Horizontal Scroll) -->
+        <section id="ulasan" class="py-12 bg-gray-50 px-4">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-xl font-bold text-gray-900">Ulasan Google</h2>
+                <div class="flex items-center gap-1 text-sm font-bold text-gray-700">
+                    <i class="fa-solid fa-star text-yellow-500"></i> 4.7
+                </div>
             </div>
 
-            <div id="reviews-container" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="flex overflow-x-auto snap-x gap-4 pb-4 hide-scrollbar">
                 <!-- Review 1 -->
-                <div class="bg-green-50/50 rounded-3xl p-8 border border-green-100 relative hover:shadow-lg transition-shadow">
-                    <div class="absolute top-4 right-6 text-6xl text-green-200/40 font-serif">"</div>
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-green-200 rounded-full flex items-center justify-center text-green-700 font-bold text-xl">
-                            B
-                        </div>
+                <div class="min-w-[85%] snap-center bg-white rounded-2xl p-5 border border-gray-100 shadow-sm relative">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-green-200 rounded-full flex items-center justify-center text-green-700 font-bold text-sm">B</div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Budi Santoso</h4>
-                            <div class="flex text-yellow-400 text-sm mt-1 gap-0.5">
+                            <h4 class="font-bold text-sm text-gray-900">Budi Santoso</h4>
+                            <div class="flex text-yellow-400 text-[10px] gap-0.5">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 leading-relaxed relative z-10 italic">
-                        "Bumbu pecelnya juara! Pas banget rasanya, kental dan pedasnya dapet. Sayurannya juga segar. Porsinya bikin kenyang, rekomen banget buat sarapan."
+                    <p class="text-gray-600 text-xs leading-relaxed italic line-clamp-4">
+                        "Bumbu pecelnya juara! Pas banget rasanya, kental dan pedasnya dapet. Sayurannya juga segar. Porsinya bikin kenyang buat sarapan."
                     </p>
                 </div>
 
                 <!-- Review 2 -->
-                <div class="bg-green-50/50 rounded-3xl p-8 border border-green-100 relative hover:shadow-lg transition-shadow">
-                    <div class="absolute top-4 right-6 text-6xl text-green-200/40 font-serif">"</div>
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-amber-200 rounded-full flex items-center justify-center text-amber-700 font-bold text-xl">
-                            S
-                        </div>
+                <div class="min-w-[85%] snap-center bg-white rounded-2xl p-5 border border-gray-100 shadow-sm relative">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 bg-amber-200 rounded-full flex items-center justify-center text-amber-700 font-bold text-sm">S</div>
                         <div>
-                            <h4 class="font-bold text-gray-900">Siti Rahmawati</h4>
-                            <div class="flex text-yellow-400 text-sm mt-1 gap-0.5">
+                            <h4 class="font-bold text-sm text-gray-900">Siti Rahmawati</h4>
+                            <div class="flex text-yellow-400 text-[10px] gap-0.5">
                                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 leading-relaxed relative z-10 italic">
-                        "Langganan dari dulu. Harganya murah meriah tapi rasanya nggak murahan. Sate usus sama tempe mendoannya wajib dicoba pas masih anget."
-                    </p>
-                </div>
-
-                <!-- Review 3 -->
-                <div class="bg-green-50/50 rounded-3xl p-8 border border-green-100 relative hover:shadow-lg transition-shadow">
-                    <div class="absolute top-4 right-6 text-6xl text-green-200/40 font-serif">"</div>
-                    <div class="flex items-center gap-4 mb-6">
-                        <div class="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center text-blue-700 font-bold text-xl">
-                            A
-                        </div>
-                        <div>
-                            <h4 class="font-bold text-gray-900">Andi Pratama</h4>
-                            <div class="flex text-yellow-400 text-sm mt-1 gap-0.5">
-                                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed relative z-10 italic">
-                        "Tempatnya bersih, pelayanannya ramah dan cepat. Rasa bumbunya bener-bener autentik pecel asli Ponorogo yang dibawa ke Malang. Mantap!"
+                    <p class="text-gray-600 text-xs leading-relaxed italic line-clamp-4">
+                        "Langganan dari dulu. Harganya murah meriah tapi rasanya nggak murahan. Sate usus sama tempe mendoannya wajib dicoba."
                     </p>
                 </div>
             </div>
             
-            <div class="text-center mt-10">
-                <a href="https://maps.app.goo.gl/zrQQ51wFMqbRTr8JA" target="_blank" class="inline-flex items-center gap-2 text-pecel-green hover:text-green-800 font-semibold hover:underline transition-colors">
-                    Baca semua ulasan di Google Maps <i class="fa-solid fa-arrow-right-long mt-0.5"></i>
-                </a>
-            </div>
-        </div>
-    </section>
+            <a href="https://maps.app.goo.gl/zrQQ51wFMqbRTr8JA" target="_blank" class="block text-center text-sm text-pecel-green font-semibold mt-2">
+                Lihat Semua (107) <i class="fa-solid fa-arrow-right text-[10px] ml-1"></i>
+            </a>
+        </section>
 
-    <!-- Location & Contact Section -->
-    <section id="lokasi" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col lg:flex-row">
+        <!-- Location Section -->
+        <section id="lokasi" class="pt-10 pb-8 bg-white">
+            <div class="px-4 mb-6">
+                <h2 class="text-xl font-bold text-gray-900 mb-4">Lokasi & Kontak</h2>
                 
-                <!-- Contact Info -->
-                <div class="lg:w-1/3 bg-pecel-dark text-white p-10 flex flex-col justify-center">
-                    <h2 class="text-3xl font-bold mb-8">Kunjungi Kami</h2>
-                    
-                    <div class="space-y-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-location-dot text-pecel-accent"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-200">Alamat</h4>
-                                <p class="text-gray-400 text-sm mt-1 leading-relaxed">
-                                    Jl. Pengayoman No.117, Karanglo, Banjararum,<br>
-                                    Kec. Singosari, Kabupaten Malang,<br>
-                                    Jawa Timur 65153, Indonesia
-                                </p>
-                            </div>
+                <div class="space-y-4">
+                    <div class="flex gap-3 items-start">
+                        <div class="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 text-pecel-accent">
+                            <i class="fa-solid fa-location-dot"></i>
                         </div>
+                        <p class="text-gray-600 text-xs leading-relaxed mt-1">
+                            <span class="font-semibold block text-gray-800 mb-0.5">Alamat</span>
+                            Jl. Pengayoman No.117, Karanglo, Banjararum, Kec. Singosari, Kab. Malang.
+                        </p>
+                    </div>
 
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-clock text-pecel-accent"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-200">Jam Operasional</h4>
-                                <p class="text-gray-400 text-sm mt-1">
-                                    Buka setiap hari<br>
-                                    Mulai Pukul 07.00 pagi
-                                </p>
-                            </div>
+                    <div class="flex gap-3 items-start">
+                        <div class="w-8 h-8 rounded-full bg-green-50 flex items-center justify-center flex-shrink-0 text-pecel-accent">
+                            <i class="fa-solid fa-clock"></i>
                         </div>
-
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center flex-shrink-0 mt-1">
-                                <i class="fa-solid fa-phone text-pecel-accent"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-semibold text-gray-200">Hubungi / Pesan</h4>
-                                <p class="text-gray-400 text-sm mt-1">
-                                    +62 822-3286-4543
-                                </p>
-                                <a href="https://wa.me/6282232864543" target="_blank" class="inline-block mt-3 px-5 py-2 bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-full transition-colors">
-                                    <i class="fa-brands fa-whatsapp mr-1"></i> Chat WhatsApp
-                                </a>
-                            </div>
-                        </div>
+                        <p class="text-gray-600 text-xs leading-relaxed mt-1">
+                            <span class="font-semibold block text-gray-800 mb-0.5">Jam Buka</span>
+                            Senin - Minggu, Mulai Pukul 07.00 pagi.
+                        </p>
                     </div>
                 </div>
+            </div>
 
-                <!-- Google Maps Embed -->
-                <div class="lg:w-2/3 h-[400px] lg:h-auto min-h-[400px] relative">
-                    <iframe 
-                        src="https://maps.google.com/maps?q=Warung%20Makan%20Pecel%20Ponorogo,%20Jl.%20Pengayoman%20No.117,%20Singosari,%20Malang&t=&z=15&ie=UTF8&iwloc=&output=embed" 
-                        width="100%" 
-                        height="100%" 
-                        style="border:0; position: absolute; top:0; left:0; width:100%; height:100%;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
-                </div>
+            <!-- Maps Embed -->
+            <div class="w-full h-64 bg-gray-200">
+                <iframe 
+                    src="https://maps.google.com/maps?q=Warung%20Makan%20Pecel%20Ponorogo,%20Jl.%20Pengayoman%20No.117,%20Singosari,%20Malang&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </section>
 
+        <!-- Footer -->
+        <footer class="bg-pecel-dark text-gray-400 py-10 px-4 text-center">
+            <h3 class="text-white font-bold text-lg mb-2">Pecel Ponorogo</h3>
+            <p class="text-xs mb-6 px-4">Sajian kuliner khas dengan cita rasa yang selalu terjaga.</p>
+            
+            <div class="flex justify-center gap-4 mb-8">
+                <a href="https://maps.app.goo.gl/zrQQ51wFMqbRTr8JA" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pecel-green text-white transition-colors">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                </a>
+                <a href="https://wa.me/6282232864543" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 text-white transition-colors">
+                    <i class="fa-brands fa-whatsapp text-lg"></i>
+                </a>
             </div>
             
-            <!-- Direct Maps Link Button -->
-            <div class="mt-8 text-center">
-                <a href="https://maps.app.goo.gl/zrQQ51wFMqbRTr8JA" target="_blank" class="inline-flex items-center gap-2 text-pecel-green font-semibold hover:text-green-800 transition-colors bg-green-50 px-6 py-3 rounded-full border border-green-200">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i> Buka di Aplikasi Google Maps
-                </a>
-            </div>
-        </div>
-    </section>
+            <p class="text-[10px] text-gray-500 border-t border-gray-800 pt-6">
+                &copy; 2024 Warung Makan Pecel Ponorogo. All rights reserved.
+            </p>
+        </footer>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-pecel-accent rounded-full flex items-center justify-center text-white font-bold">
-                        <i class="fa-solid fa-utensils text-sm"></i>
-                    </div>
-                    <span class="font-bold text-xl text-white">Pecel <span class="text-pecel-accent">Ponorogo</span></span>
-                </div>
-                
-                <div class="text-sm text-gray-500 text-center md:text-left">
-                    &copy; 2024 Warung Makan Pecel Ponorogo - Singosari Malang. All rights reserved.
-                </div>
-                
-                <div class="flex space-x-4">
-                    <a href="https://maps.app.goo.gl/zrQQ51wFMqbRTr8JA" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-pecel-green hover:text-white transition-colors">
-                        <i class="fa-solid fa-map-location-dot"></i>
-                    </a>
-                    <a href="https://wa.me/6282232864543" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-green-500 hover:text-white transition-colors">
-                        <i class="fa-brands fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        <!-- Bottom Navigation Bar (App Style) -->
+        <nav class="fixed bottom-0 w-full max-w-md bg-white border-t border-gray-200 z-50 flex justify-around items-center h-16 pb-safe text-xs font-medium shadow-[0_-5px_15px_-10px_rgba(0,0,0,0.1)]">
+            <a href="#beranda" class="flex flex-col items-center gap-1 w-1/4 text-pecel-green nav-link" onclick="setActive(this)">
+                <i class="fa-solid fa-house text-lg"></i>
+                <span class="text-[9px]">Beranda</span>
+            </a>
+            <a href="#menu" class="flex flex-col items-center gap-1 w-1/4 text-gray-400 hover:text-pecel-green nav-link transition-colors" onclick="setActive(this)">
+                <i class="fa-solid fa-utensils text-lg"></i>
+                <span class="text-[9px]">Menu</span>
+            </a>
+            <a href="#ulasan" class="flex flex-col items-center gap-1 w-1/4 text-gray-400 hover:text-pecel-green nav-link transition-colors" onclick="setActive(this)">
+                <i class="fa-solid fa-star text-lg"></i>
+                <span class="text-[9px]">Ulasan</span>
+            </a>
+            <a href="#lokasi" class="flex flex-col items-center gap-1 w-1/4 text-gray-400 hover:text-pecel-green nav-link transition-colors" onclick="setActive(this)">
+                <i class="fa-solid fa-location-dot text-lg"></i>
+                <span class="text-[9px]">Lokasi</span>
+            </a>
+        </nav>
 
-    <!-- JavaScript -->
+    </div>
+
+    <!-- Script for Bottom Nav active state -->
     <script>
-        // Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const icon = btn.querySelector('i');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            if (menu.classList.contains('hidden')) {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            }
-        });
-
-        // Close mobile menu when a link is clicked
-        const mobileLinks = menu.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
+        function setActive(element) {
+            // Remove active classes from all links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('text-pecel-green');
+                link.classList.add('text-gray-400');
             });
-        });
-
-        // Navbar Scroll Effect
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('navbar');
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-md', 'bg-white/95');
-                nav.classList.remove('bg-white/90');
-            } else {
-                nav.classList.remove('shadow-md', 'bg-white/95');
-                nav.classList.add('bg-white/90');
-            }
-        });
+            // Add active class to clicked link
+            element.classList.remove('text-gray-400');
+            element.classList.add('text-pecel-green');
+        }
     </script>
 </body>
 </html>
